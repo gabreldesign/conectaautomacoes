@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conecta Automações - Transforme sua Operação com Inteligência</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://www.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b0764 100%);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6 0%, #a855f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .cta-button {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px 0 rgba(59, 130, 246, 0.3);
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px 0 rgba(139, 92, 246, 0.4);
+        }
+        .popular-package {
+            border-color: #8b5cf6;
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px -10px rgba(139, 92, 246, 0.2);
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Estilos do Modal */
+        #contactModal.hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-300">
+
+    <!-- Seção 1: Cabeçalho -->
+    <header class="gradient-bg relative overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-20"></div>
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center relative z-10">
+            <h1 class="text-2xl font-bold text-white">Conecta Automações</h1>
+            <a href="#" class="cta-button text-white font-bold py-2 px-5 rounded-lg hidden sm:block open-modal-btn">
+                Agendar Demonstração
+            </a>
+        </nav>
+        <div class="container mx-auto px-6 pt-24 pb-32 text-center relative z-10">
+            <h2 class="text-4xl md:text-6xl font-black leading-tight mb-4 text-white">
+                Pare de fazer trabalho manual. <br> <span class="gradient-text bg-white">Automatize e Escale.</span>
+            </h2>
+            <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
+                Nós criamos a tecnologia para que você tenha tempo de focar no que realmente importa: seus clientes e seu crescimento.
+            </p>
+            <a href="https://wa.me/+5592988336505?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20a%20Conecta%20Automa%C3%A7%C3%B5es" target="_blank" class="cta-button text-white font-bold py-4 px-10 rounded-lg text-lg inline-block">
+                Fale com nosso especialista
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Seção 2: O Problema -->
+        <section id="problema" class="py-24 bg-gray-900">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 fade-in">Sua operação diária é um campo de batalha?</h2>
+                <p class="text-gray-400 mb-16 max-w-3xl mx-auto fade-in" style="transition-delay: 100ms;">Se estes desafios soam familiares, você não está sozinho. E o mais importante: existe uma solução.</p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Cards de Problema -->
+                    <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-blue-500 transition-all duration-300 fade-in" style="transition-delay: 200ms;">
+                        <svg class="w-12 h-12 gradient-text mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" /></svg>
+                        <h3 class="font-semibold text-lg text-white mb-2">Clientes Silenciosos</h3>
+                        <p class="text-gray-400 text-sm">O feedback valioso se perde ou, pior, vira uma crítica negativa pública.</p>
+                    </div>
+                    <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-blue-500 transition-all duration-300 fade-in" style="transition-delay: 300ms;">
+                        <svg class="w-12 h-12 gradient-text mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM3 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 0110.374 21c-2.331 0-4.512-.645-6.374-1.766z" /></svg>
+                        <h3 class="font-semibold text-lg text-white mb-2">Contratação Desorganizada</h3>
+                        <p class="text-gray-400 text-sm">Talentos escapam por entre os dedos em meio a um caos de e-mails e currículos.</p>
+                    </div>
+                    <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-blue-500 transition-all duration-300 fade-in" style="transition-delay: 400ms;">
+                        <svg class="w-12 h-12 gradient-text mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375l-6.25 6.25-6.25-6.25L3 10.5l9 9 9-9-4.25-4.125z" /></svg>
+                        <h3 class="font-semibold text-lg text-white mb-2">Caos nas Planilhas</h3>
+                        <p class="text-gray-400 text-sm">Informações críticas estão presas em arquivos frágeis e que não geram inteligência.</p>
+                    </div>
+                    <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-blue-500 transition-all duration-300 fade-in" style="transition-delay: 500ms;">
+                        <svg class="w-12 h-12 gradient-text mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        <h3 class="font-semibold text-lg text-white mb-2">Equipe Desperdiçada</h3>
+                        <p class="text-gray-400 text-sm">O potencial da sua equipe é consumido por tarefas repetitivas que uma máquina faria melhor.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 3: A Solução -->
+        <section id="solucao" class="py-24 bg-gray-950">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 fade-in">Sua empresa no piloto automático. <br>Você no controle estratégico.</h2>
+                <p class="text-gray-400 mb-10 max-w-3xl mx-auto fade-in" style="transition-delay: 100ms;">A Conecta Automações troca o caos por clareza e a repetição por eficiência. O resultado? Mais lucro, menos estresse.</p>
+                <a href="#pacotes" class="cta-button text-white font-bold py-3 px-8 rounded-lg transition duration-300 fade-in" style="transition-delay: 200ms;">
+                    Ver Planos de Automação
+                </a>
+            </div>
+        </section>
+
+        <!-- Seção 4: Pacotes e Preços -->
+        <section id="pacotes" class="py-24 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white fade-in">Soluções de automação para cada fase do seu negócio.</h2>
+                    <p class="text-gray-400 mt-4 max-w-2xl mx-auto fade-in" style="transition-delay: 100ms;">Investimento único na implementação. Sem surpresas. Sem mensalidades escondidas.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-center items-start">
+                    <!-- Pacote NOVO -->
+                    <div class="w-full max-w-sm mx-auto bg-gray-800 border border-gray-700 rounded-xl shadow-lg p-8 transform hover:-translate-y-2 transition duration-300 fade-in" style="transition-delay: 100ms;">
+                        <h3 class="text-2xl font-bold text-center text-white mb-2">PESQUISA ESSENCIAL</h3>
+                        <p class="text-center text-gray-400 mb-8 h-12">Comece a ouvir seus clientes e tomar decisões com base em dados.</p>
+                        <ul class="space-y-4 mb-8 text-gray-300">
+                            <li class="flex items-start"><svg class="w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg><span>Plataforma de Pesquisa de Satisfação (NPS)</span></li>
+                        </ul>
+                        <div class="text-center pt-8 border-t border-gray-700 mt-[105px]">
+                            <p class="text-sm text-gray-500">Valor de Implementação</p>
+                            <p class="text-4xl font-extrabold my-2 text-white">R$ 2.000</p>
+                            <a href="#" class="mt-6 w-full inline-block bg-gray-700 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-600 transition duration-300 open-modal-btn">Contratar Pesquisa</a>
+                        </div>
+                    </div>
+                    <!-- Pacote 1 -->
+                    <div class="w-full max-w-sm mx-auto bg-gray-800 border border-gray-700 rounded-xl shadow-lg p-8 transform hover:-translate-y-2 transition duration-300 fade-in" style="transition-delay: 200ms;">
+                        <h3 class="text-2xl font-bold text-center text-white mb-2">CONEXÃO CLIENTE</h3>
+                        <p class="text-center text-gray-400 mb-8 h-12">Ideal para ouvir, entender e transformar clientes em fãs.</p>
+                        <ul class="space-y-4 mb-8 text-gray-300">
+                            <li class="flex items-start font-semibold"><svg class="w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg><span>Tudo do Pacote Pesquisa Essencial</span></li>
+                            <li class="flex items-start font-bold gradient-text"><svg class="w-5 h-5 text-purple-400 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg><span>Canal Centralizado de Feedback</span></li>
+                            <li class="flex items-start font-bold gradient-text"><svg class="w-5 h-5 text-purple-400 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg><span>Dashboard de Satisfação em Tempo Real</span></li>
+                        </ul>
+                        <div class="text-center pt-8 border-t border-gray-700">
+                            <p class="text-sm text-gray-500">Valor de Implementação</p>
+                            <p class="text-4xl font-extrabold my-2 text-white">R$ 4.000</p>
+                            <a href="#" class="mt-6 w-full inline-block bg-gray-700 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-600 transition duration-300 open-modal-btn">Contratar Conexão</a>
+                        </div>
+                    </div>
+                    <!-- Pacote 2 (Mais Popular) -->
+                    <div class="w-full max-w-sm mx-auto bg-gray-800 border-2 rounded-xl shadow-2xl p-8 relative popular-package fade-in" style="transition-delay: 300ms;">
+                        <span class="bg-purple-600 text-white text-xs font-bold px-4 py-1 rounded-full uppercase absolute -top-4 left-1/2 -translate-x-1/2 tracking-wider">Mais Popular</span>
+                        <h3 class="text-2xl font-bold text-center text-white mb-2">GESTÃO INTELIGENTE</h3>
+                        <p class="text-center text-gray-400 mb-8 h-12">Para otimizar a operação e construir um time de elite.</p>
+                        <ul class="space-y-4 mb-8 text-gray-300">
+                           <li class="flex items-start font-semibold"><svg class="w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg><span>Tudo do Pacote Conexão Cliente</span></li>
+                           <li class="flex items-start font-bold gradient-text"><svg class="w-5 h-5 text-purple-400 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg><span>Plataforma de Recrutamento e Seleção</span></li>
+                        </ul>
+                        <div class="text-center pt-8 border-t border-gray-700">
+                            <p class="text-sm text-gray-500">Valor de Implementação</p>
+                            <p class="text-4xl font-extrabold my-2 text-white">R$ 5.650</p>
+                            <a href="#" class="mt-6 w-full inline-block cta-button text-white font-bold py-3 px-6 rounded-lg open-modal-btn">Quero o Mais Popular</a>
+                        </div>
+                    </div>
+                    <!-- Pacote 3 -->
+                    <div class="w-full max-w-sm mx-auto bg-gray-800 border border-gray-700 rounded-xl shadow-lg p-8 transform hover:-translate-y-2 transition duration-300 fade-in" style="transition-delay: 400ms;">
+                        <h3 class="text-2xl font-bold text-center text-white mb-2">ECOSSISTEMA TOTAL</h3>
+                        <p class="text-center text-gray-400 mb-8 h-12">A transformação digital completa e sob medida para sua empresa.</p>
+                        <ul class="space-y-4 mb-8 text-gray-300">
+                            <li class="flex items-start font-semibold"><svg class="w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg><span>Tudo do Pacote Gestão Inteligente</span></li>
+                            <li class="flex items-start font-bold gradient-text"><svg class="w-5 h-5 text-purple-400 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg><span>Automações Sob Medida para seu Nicho</span></li>
+                            <li class="flex items-start font-bold gradient-text"><svg class="w-5 h-5 text-purple-400 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg><span>Master Dashboard com Business Intelligence</span></li>
+                        </ul>
+                        <div class="text-center pt-8 border-t border-gray-700">
+                            <p class="text-sm text-gray-500">Valor de Implementação</p>
+                            <p class="text-4xl font-extrabold my-2 text-white">A partir de R$ 8.997</p>
+                            <a href="#" class="mt-6 w-full inline-block bg-gray-700 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-600 transition duration-300 open-modal-btn">Agendar Consultoria</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Seção 5: Como Funciona -->
+        <section id="como-funciona" class="py-24 bg-gray-950">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white fade-in">Da ideia à automação em 4 passos simples.</h2>
+                </div>
+                <div class="relative max-w-4xl mx-auto">
+                    <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-gray-700 -translate-y-1/2"></div>
+                    <div class="grid md:grid-cols-4 gap-16 text-center">
+                        <div class="relative fade-in" style="transition-delay: 100ms;">
+                            <div class="mx-auto mb-4 w-16 h-16 flex items-center justify-center text-xl font-bold rounded-full border-2 border-blue-500 bg-gray-900 text-white z-10 relative">01</div>
+                            <h3 class="font-bold text-lg text-white">Diagnóstico</h3>
+                            <p class="text-gray-400 text-sm">Uma conversa de 30 min para mapear seus gargalos e oportunidades.</p>
+                        </div>
+                        <div class="relative fade-in" style="transition-delay: 200ms;">
+                            <div class="mx-auto mb-4 w-16 h-16 flex items-center justify-center text-xl font-bold rounded-full border-2 border-blue-500 bg-gray-900 text-white z-10 relative">02</div>
+                            <h3 class="font-bold text-lg text-white">Implementação</h3>
+                            <p class="text-gray-400 text-sm">Nós construímos e personalizamos a plataforma com a sua marca.</p>
+                        </div>
+                        <div class="relative fade-in" style="transition-delay: 300ms;">
+                            <div class="mx-auto mb-4 w-16 h-16 flex items-center justify-center text-xl font-bold rounded-full border-2 border-blue-500 bg-gray-900 text-white z-10 relative">03</div>
+                            <h3 class="font-bold text-lg text-white">Treinamento</h3>
+                            <p class="text-gray-400 text-sm">Capacitamos sua equipe para extrair o máximo da nova ferramenta.</p>
+                        </div>
+                        <div class="relative fade-in" style="transition-delay: 400ms;">
+                            <div class="mx-auto mb-4 w-16 h-16 flex items-center justify-center text-xl font-bold rounded-full border-2 border-blue-500 bg-gray-900 text-white z-10 relative">04</div>
+                            <h3 class="font-bold text-lg text-white">Suporte</h3>
+                            <p class="text-gray-400 text-sm">Conte com nosso time para qualquer dúvida ou evolução.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 6: Para Quem é Ideal? -->
+        <section id="publico" class="py-24 bg-gray-900">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-16 fade-in">Criado para negócios que não têm tempo a perder.</h2>
+                <div class="flex flex-wrap justify-center gap-x-8 gap-y-12">
+                    <div class="flex flex-col items-center w-40 fade-in" style="transition-delay: 100ms;">
+                        <div class="p-4 bg-gray-800 border border-gray-700 rounded-xl mb-4"><svg class="w-10 h-10 gradient-text" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /></svg></div>
+                        <span class="font-semibold text-white">Clínicas e Consultórios</span>
+                    </div>
+                    <div class="flex flex-col items-center w-40 fade-in" style="transition-delay: 200ms;">
+                        <div class="p-4 bg-gray-800 border border-gray-700 rounded-xl mb-4"><svg class="w-10 h-10 gradient-text" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.898 20.624l.259 1.035.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 18l1.036.259a3.375 3.375 0 002.455 2.456z" /></svg></div>
+                        <span class="font-semibold text-white">Bares e Restaurantes</span>
+                    </div>
+                    <div class="flex flex-col items-center w-40 fade-in" style="transition-delay: 300ms;">
+                        <div class="p-4 bg-gray-800 border border-gray-700 rounded-xl mb-4"><svg class="w-10 h-10 gradient-text" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" /></svg></div>
+                        <span class="font-semibold text-white">Escritórios e Consultorias</span>
+                    </div>
+                    <div class="flex flex-col items-center w-40 fade-in" style="transition-delay: 400ms;">
+                        <div class="p-4 bg-gray-800 border border-gray-700 rounded-xl mb-4"><svg class="w-10 h-10 gradient-text" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0h18" /></svg></div>
+                        <span class="font-semibold text-white">Prestadores de Serviço</span>
+                    </div>
+                    <div class="flex flex-col items-center w-40 fade-in" style="transition-delay: 500ms;">
+                        <div class="p-4 bg-gray-800 border border-gray-700 rounded-xl mb-4"><svg class="w-10 h-10 gradient-text" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" /></svg></div>
+                        <span class="font-semibold text-white">PMEs em Crescimento</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 7: Chamada Final para Ação -->
+        <section id="cta-final" class="py-24 gradient-bg">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4 fade-in">Pronto para colocar sua empresa no piloto automático?</h2>
+                <p class="text-gray-300 mb-10 max-w-3xl mx-auto fade-in" style="transition-delay: 100ms;">A diferença entre sobreviver e prosperar está na inteligência da sua operação. Dê o primeiro passo hoje.</p>
+                <a href="https://wa.me/+5592988336505?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20a%20Conecta%20Automa%C3%A7%C3%B5es" target="_blank" class="bg-white text-blue-600 font-bold py-4 px-10 rounded-lg text-lg hover:bg-gray-200 transition duration-300 inline-block shadow-2xl transform hover:scale-105 fade-in" style="transition-delay: 200ms;">
+                    Fale com nosso especialista
+                </a>
+                <p class="mt-6 text-sm text-gray-300 fade-in" style="transition-delay: 300ms;">Sem compromisso. Apenas uma conversa para mostrarmos o potencial real para o seu negócio.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 text-gray-500 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Conecta Automações. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Modal de Contato -->
+    <div id="contactModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-50 hidden">
+        <div class="bg-gray-800 rounded-xl shadow-2xl p-8 w-full max-w-md relative border border-gray-700">
+            <button id="closeModalBtn" class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <div id="form-content">
+                <h2 class="text-2xl font-bold text-white text-center mb-2">Fale com um Especialista</h2>
+                <p class="text-center text-gray-400 mb-6">Preencha os dados abaixo e retornaremos o mais breve possível.</p>
+                <form id="contactForm">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-400 text-sm font-bold mb-2">Nome Completo</label>
+                        <input type="text" id="name" name="name" required class="w-full bg-gray-700 border border-gray-600 rounded-lg py-2 px-3 text-white focus:outline-none focus:border-blue-500">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-400 text-sm font-bold mb-2">E-mail</label>
+                        <input type="email" id="email" name="email" required class="w-full bg-gray-700 border border-gray-600 rounded-lg py-2 px-3 text-white focus:outline-none focus:border-blue-500">
+                    </div>
+                    <div class="mb-4">
+                        <label for="phone" class="block text-gray-400 text-sm font-bold mb-2">Telefone / WhatsApp</label>
+                        <input type="tel" id="phone" name="phone" required class="w-full bg-gray-700 border border-gray-600 rounded-lg py-2 px-3 text-white focus:outline-none focus:border-blue-500">
+                    </div>
+                    <div class="mb-6">
+                        <label for="company" class="block text-gray-400 text-sm font-bold mb-2">Nome da Empresa</label>
+                        <input type="text" id="company" name="company" class="w-full bg-gray-700 border border-gray-600 rounded-lg py-2 px-3 text-white focus:outline-none focus:border-blue-500">
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" id="submitBtn" class="w-full cta-button text-white font-bold py-3 px-6 rounded-lg">
+                            Solicitar Contato
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div id="success-message" class="hidden text-center py-8">
+                <svg class="w-16 h-16 text-green-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <h2 class="text-2xl font-bold text-white mb-2">Obrigado!</h2>
+                <p class="text-gray-300">Sua solicitação foi enviada com sucesso. Nossa equipe entrará em contato em breve.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script type="module">
+        // Importações do Firebase
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        // Configuração do Firebase
+        // As variáveis __firebase_config, __app_id e __initial_auth_token são injetadas pelo ambiente
+        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+        
+        // Inicialização dos serviços
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+
+        // Autenticação
+        async function authenticate() {
+            try {
+                if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
+                    await signInWithCustomToken(auth, __initial_auth_token);
+                } else {
+                    await signInAnonymously(auth);
+                }
+            } catch (error) {
+                console.error("Erro na autenticação:", error);
+            }
+        }
+        authenticate();
+
+        // Lógica do Modal
+        const modal = document.getElementById('contactModal');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+        const openModalBtns = document.querySelectorAll('.open-modal-btn');
+        
+        const openModal = () => modal.classList.remove('hidden');
+        const closeModal = () => modal.classList.add('hidden');
+
+        openModalBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                openModal();
+            });
+        });
+        closeModalBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Lógica do Formulário
+        const contactForm = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const formContent = document.getElementById('form-content');
+        const successMessage = document.getElementById('success-message');
+
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // Desabilita o botão para evitar múltiplos envios
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Enviando...';
+
+            const formData = {
+                name: contactForm.name.value,
+                email: contactForm.email.value,
+                phone: contactForm.phone.value,
+                company: contactForm.company.value,
+                submittedAt: serverTimestamp()
+            };
+
+            try {
+                // Salva os dados no Firestore
+                // Os leads são salvos em uma coleção pública para que a equipe possa acessá-los
+                const leadsCollectionRef = collection(db, `artifacts/${appId}/public/data/leads`);
+                await addDoc(leadsCollectionRef, formData);
+                
+                // Mostra a mensagem de sucesso
+                formContent.classList.add('hidden');
+                successMessage.classList.remove('hidden');
+
+                // Reseta o formulário após um tempo e fecha o modal
+                setTimeout(() => {
+                    contactForm.reset();
+                    closeModal();
+                    // Garante que o formulário volte ao estado inicial para a próxima abertura
+                    setTimeout(() => {
+                        formContent.classList.remove('hidden');
+                        successMessage.classList.add('hidden');
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = 'Solicitar Contato';
+                    }, 500);
+                }, 3000);
+
+            } catch (error) {
+                console.error("Erro ao enviar o formulário: ", error);
+                alert("Ocorreu um erro ao enviar sua solicitação. Tente novamente.");
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Solicitar Contato';
+            }
+        });
+
+        // Script para animação de fade-in ao rolar a página
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        const fadeElements = document.querySelectorAll('.fade-in');
+        fadeElements.forEach(el => observer.observe(el));
+    </script>
+
+</body>
+</html>
+
